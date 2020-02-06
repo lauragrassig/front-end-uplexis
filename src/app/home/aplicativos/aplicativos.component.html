@@ -1,0 +1,55 @@
+<div class="wrapper-banner">
+  <div class="banner">
+    <div class="banner_title">
+      <div class="title_logo">
+        <div class="logo_gota"></div>
+        <div class="logo_name"><h1>flooop</h1></div>
+      </div>
+      <div class="title_title">
+        <h2 class="title_banner">Histórico Empresarial</h2>
+      </div>
+    </div>
+    <div class="banner_description">
+      <p>O aplicativo Histórico Empresarial permite ao usuário ter acesso a todos os fatos e acontecimentos relevantes de uma empresa desde o seu ano de fundação</p>
+    </div>
+    <div class="banner_price">
+      <div class="price_price">
+        <span>R$</span>
+        <span>40,00</span>
+      </div>
+      <div class="price_button">
+        <button class="button-default">Saiba Mais</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="aplicativos">
+  <div class="select">
+    <span>Ordenar</span>
+    <select name="select-aplicativos" (change)="selectFilter($event);">
+      <option value="todos">Todos</option>
+      <option value="lancamento">Lançamento</option>
+      <option value="preco">Menor Preço</option>
+    </select>
+  </div>
+  <div class="wrapper-cards">
+      <div *ngFor="let card of apiCard; let i = index;" class="card" [attr.data-eventtype]="card.type">
+      <div class="card_icon">
+        <i class="{{card.icon}}"></i>
+      </div>
+      <div class="card_title">
+        <h3>{{card.title}}</h3>
+      </div>
+      <div class="card_description">
+        <p>{{card.description}}</p>
+      </div>
+      <div class="card_more">
+        <div class="more_price">R$ 29,99</div>
+        <div class="more_button">
+          <button class="button-default -no-bg" (click)="openSaibaMais(i)">Saiba Mais</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

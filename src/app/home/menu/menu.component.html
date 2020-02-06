@@ -1,0 +1,25 @@
+<header>
+  <div class="logo">
+    <div class="logo_gota"></div>
+    <div class="logo_name"><h1>flooop</h1></div>
+  </div>
+  <div class="mobile">
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <li [routerLink]="['/']">Aplicativos</li>
+          <li [routerLink]="['/fontes']">Fontes</li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="desktop">
+    <span [routerLink]="['/']" (click)="changeMenu()" id="aplicativos" class="-active">Aplicativos</span>
+    <span [routerLink]="['/fontes']" (click)="changeMenu()" id="fontes">Fontes</span>
+  </div>
+</header>
+<div class="space"></div>

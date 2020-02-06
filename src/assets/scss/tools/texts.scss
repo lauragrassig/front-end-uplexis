@@ -1,0 +1,24 @@
+.title_banner {
+  position: relative;
+  color: #4a4a4a;
+  font-size: 1.5rem;
+  font-weight: 900;
+  padding-left: 1rem;
+  &:before {
+    content: '';
+    height: 1.5rem;
+    width: 2px;
+    position: absolute;
+    background-color: rgba(186, 183, 181, 0.6);
+    top: .5rem;
+    left: .3rem;
+  }
+
+  @media #{$device-g-md} {
+    font-size: 2.5rem;
+    &:before {
+      height: 2.5rem;
+      top: .7rem;
+    }
+  }
+}

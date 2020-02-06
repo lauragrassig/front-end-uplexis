@@ -1,0 +1,65 @@
+.aplicativos {
+  padding: 1rem 2rem;
+
+  @media #{$device-g-md} {
+    padding: 1rem 5rem;
+  }
+  .select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media #{$device-g-md} {
+      align-items: inherit;
+    }
+    span {
+      color: $text-color;
+      font-weight: 800;
+      text-transform: uppercase;
+      @media #{$device-g-md} {
+        font-size: 1.2rem;
+      }
+    }
+    select {
+      border: 1px solid rgba(128, 128, 128, .6);
+      border-radius: .2rem;
+      max-width: 10rem;
+    }
+  }
+}
+
+.saiba_mais {
+  padding: 1rem 2rem;
+  @media #{$device-g-md} {
+    padding: 1rem 5rem;
+  }
+
+  h3 {
+    font-weight: 700;
+    color: #ec6719;
+    @media #{$device-g-md} {
+      font-size: 2.5rem;
+    }
+  }
+  .saiba_description {
+    color: grey;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  .saiba_price {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    .price_price {
+      color: $text-color;
+      font-weight: 600;
+      font-size: 1.5rem;
+      span {
+        &:last-child {
+          font-size: 3rem;
+          padding-right: 1.3rem;
+        }
+      }
+    }
+  }
+}

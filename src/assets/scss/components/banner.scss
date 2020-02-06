@@ -1,0 +1,90 @@
+// *~ Banner
+.wrapper-banner {
+  .banner {
+    // background-image: url('https://placeimg.com/1000/1000/tech');
+    background-color: #d6d6d6;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 27rem;
+    padding: 2rem;
+
+    border-bottom: .2rem solid $base-color;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    @media #{$device-g-md} {
+      padding: 0 5rem;
+    }
+
+    &_title {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      .title_logo {
+        display: flex;
+        align-items: center;
+        .logo_name {
+          @media #{$device-g-md} {
+            font-size: 1.4rem;
+          }
+        }
+      }
+      .logo_gota {
+        @media #{$device-g-md} {
+          height: 1.5rem;
+          width: 1.5rem;
+        }
+      }
+    }
+
+    &_description {
+      padding-top: 1rem;
+      color: grey;
+      max-width: 35rem;
+      font-size: 1.4rem;
+    }
+
+    &_price {
+      padding-top: .5rem;
+
+      display: flex;
+      align-items: center;
+      .price_price {
+        padding-right: 1rem;
+        span {
+          color: $text-color;
+          font-weight: 600;
+          font-size: 1.5rem;
+          &:nth-child(2) {
+            font-size: 2.5rem;
+            padding-left: .5rem;
+          }
+          @media #{$device-g-md} {
+            font-size: 2rem;
+            &:nth-child(2) {
+              font-size: 3rem;
+            }
+          }
+        }
+      }
+    }
+
+    &.-dark-mode {
+      background-color: #05015a;
+      span, p, h2, h1 { color: white; }
+      .logo_gota {
+        background-color: white;
+      }
+      .logo_name {
+        &:after { background: white; }
+      }
+    }
+  }
+}
